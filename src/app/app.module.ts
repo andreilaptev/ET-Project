@@ -16,6 +16,8 @@ import { PatientProfileComponent } from './patient-profile/patient-profile.compo
 import { PatientRegisterComponent } from './patient-register/patient-register.component';
 import { VideoComponent } from './video/video.component';
 import { CreatePrecriptionComponent } from './create-precription/create-precription.component';
+import { NurseLoginComponent } from './nurse-login/nurse-login.component';
+import { PatientLoginComponent } from './patient-login/patient-login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { CreatePrecriptionComponent } from './create-precription/create-precript
     PatientProfileComponent,
     PatientRegisterComponent,
     VideoComponent,
-    CreatePrecriptionComponent
+    CreatePrecriptionComponent,
+    NurseLoginComponent,
+    PatientLoginComponent
     
   ],
   imports: [
