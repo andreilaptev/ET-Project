@@ -27,7 +27,7 @@ export class PatientRegisterComponent implements OnInit {
     this.data.registerPatient(newPatient).subscribe(
       data => this.patient = data
     )
-    
+    console.log(this.patient);
     this.router.navigate(['/list']);
     
     //console.log(newPatient)

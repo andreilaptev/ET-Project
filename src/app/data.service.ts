@@ -24,7 +24,23 @@ export class DataService {
   }
 
   getPatient(patientId){
-    
+
   }
 
+  patientLogin(email, password){
+    const body = {
+      email: email,     
+      password: password 
+  };
+
+   return  this.http.post('http://localhost:8080/auth/patient-login', body);
+  }
+
+  nurseLogin(email, password){
+    const body = {
+      email: email,     
+      password: password 
+  };
+  return this.http.post('http://localhost:8080/auth/nurse-login', body);
+  }
 }
