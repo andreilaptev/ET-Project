@@ -2,22 +2,22 @@
 
   <h2> REGISTRATION FORM </h2>
 
-  Name :
+  Name :<br>
  <input type="text" name="name" [(ngModel)]="newPatient.name"/>
  
-  <br> 
+  <br> <br>
 
-  Email:
+  Email:<br>
 <input type="text" name="email"   [(ngModel)]="newPatient.email" /> 
  
-<br>
+<br><br>
 
-Password: 
+Password: <br>
 <input type="password" name="password" [(ngModel)]="newPatient.password" />
  
-<br>
+<br><br>
 
-  <button (click)="addPatient(newPatient)"> REGISTER </button>
+  <button class="enterBtn" (click)="addPatient(newPatient)"> REGISTER </button>
   <br>
 
 

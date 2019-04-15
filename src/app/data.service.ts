@@ -23,4 +23,8 @@ export class DataService {
     return this.http.post('http://localhost:8080/auth/patient-register', body);
   }
 
+  getPatient(patientId){
+    
+  }
+
 }
