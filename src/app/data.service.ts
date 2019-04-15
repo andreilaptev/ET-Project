@@ -6,5 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getAllPatients() {
+    return this.http.get('http://localhost:8080/nurse/patients');
+  }
+
+  
+
 }
