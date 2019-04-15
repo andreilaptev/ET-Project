@@ -9,6 +9,8 @@ import { PatientRegisterComponent } from 'src/app/patient-register/patient-regis
 import { VideoComponent } from 'src/app/video/video.component';
 import { PatientListComponent } from 'src/app/patient-list/patient-list.component';
 import { CreatePrecriptionComponent } from 'src/app/create-precription/create-precription.component';
+import { NurseLoginComponent } from 'src/app/nurse-login/nurse-login.component';
+import { PatientLoginComponent } from 'src/app/patient-login/patient-login.component';
 
 const routes: Routes = [
 {
@@ -46,6 +48,14 @@ const routes: Routes = [
 {
   path: 'create_prescription',
   component: CreatePrecriptionComponent
+},
+{
+  path: 'nurse-login',
+  component: NurseLoginComponent
+},
+{
+  path: 'patient-login',
+  component: PatientLoginComponent
 }
 
 ];

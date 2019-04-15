@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { concat } from 'rxjs/internal/observable/concat';
 import { HttpClient } from '@angular/common/http';
 import { Patient } from '../patient';
