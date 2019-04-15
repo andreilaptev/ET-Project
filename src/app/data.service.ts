@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,  HttpHeaders, HttpParams } from '@angular/common/http';
 //import { Patient } from '../patient';
 
 @Injectable({
@@ -33,7 +33,10 @@ export class DataService {
       password: password 
   };
 
-   return  this.http.post('http://localhost:8080/auth/patient-login', body);
+  let params = new HttpParams().set("req" , JSON.stringify(body));
+  let headers = new HttpHeaders();
+  headers.append('Content-Type', 'application/json');
+   return  this.http.get('http://localhost:8080/auth/patient-login', {params: params});
   }
 
   nurseLogin(email, password){
