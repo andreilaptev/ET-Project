@@ -13,5 +13,5 @@ export class Patient {
     dailyInfo: [{
         title: string,
         body: string
-      }]
+      }];
 }

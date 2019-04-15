@@ -1,3 +1,25 @@
-<p>
-  patient-register works!
-</p>
+<div class="container">
+
+  <h2> REGISTRATION FORM </h2>
+
+  Name :
+ <input type="text" name="name" [(ngModel)]="newPatient.name"/>
+ 
+  <br> 
+
+  Email:
+<input type="text" name="email"   [(ngModel)]="newPatient.email" /> 
+ 
+<br>
+
+Password: 
+<input type="password" name="password" [(ngModel)]="newPatient.password" />
+ 
+<br>
+
+  <button (click)="addPatient(newPatient)"> REGISTER </button>
+  <br>
+
+
+
+</div>
