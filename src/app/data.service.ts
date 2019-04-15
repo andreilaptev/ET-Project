@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+//import { Patient } from '../patient';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,6 @@ export class DataService {
 
   getAllPatients() {
     return this.http.get('http://localhost:8080/nurse/patients');
-  }
-
-  
+  }  
 
 }
