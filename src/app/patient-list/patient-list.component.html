@@ -7,25 +7,25 @@
           
           <div > 
               <a routerLink="/patient/{{patient.id}}">                
-              <h3 class="flight_name">  Patient : {{ patient.name }} {{patient.id}}</h3>
+              <h3 class="flight_name">  Patient Name : {{ patient.name }} {{patient.id}}</h3>
 
                   <table>
                       <thead>
                           <tr>
-                              <th> Email </th>
-                              <!--<th> Arrival City</th>-->
-                             <!-- <th> Departure Time </th>
-                              <th> Arrival Time </th>
+                              <th style="padding-right: 20px"> Email </th>
+                              <th style="padding-right: 20px"> Arrival Date</th>
+                              <th style="padding-right: 20px"> Updated </th>
+                               <!-- <th> Arrival Time </th>
                               <th> Direct </th>
                               <th> Price </th>-->
                           </tr>
                       </thead>
                       <tbody>
                           <tr>
-                              <td>{{ patient.email }}</td> <!-- | enter: departureCityField : i-->
-                             <!-- <td> {{ flight.arrivalCity }}</td>
-                              <td> {{ flight.departureTime }} </td>
-                              <td> {{ flight.arrivalTime }}</td>
+                              <td style="padding-right: 20px">{{ patient.email }}</td> <!-- | enter: departureCityField : i-->
+                              <td style="padding-right: 20px"> {{ patient.createdAt | date }}</td>
+                              <td style="padding-right: 20px"> {{ patient.updatedAt | date }}</td>
+                              <!--<td> {{ flight.arrivalTime }}</td>
                               <td>
                                  <div style="color:green" *ngIf="flight.direct;else unset"> Yes</div> 
                                  <ng-template #unset>No </ng-template>
