@@ -55,7 +55,7 @@ export class PatientLoginComponent implements OnInit {
           }else            
               if (this.requestedPatient.password === this.password) {
 
-                this.sessionStorage.store('id', this.requestedPatient._id);
+                this.sessionStorage.store('patient_id', this.requestedPatient._id);
                 this.router.navigate(['patient_page']);
               }
               else {
