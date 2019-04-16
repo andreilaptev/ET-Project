@@ -48,14 +48,8 @@ export class DataService {
       email: email,     
       password: password 
   };
-  return this.http.post('http://localhost:8080/auth/nurse-login', body);
+  return this.http.get('http://localhost:8080/auth/nurse-login?email=' + email + '&password=' + password);
   }
 
-  testHttp(){
-
-    const id = 1;
-
-    let temp = this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/Customers/' + id);
-    return temp;
-  }
+   
 }
