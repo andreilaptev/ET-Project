@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckDiseaseComponent implements OnInit {
 
+  symptom1: string;
+  symptom2: string;
+  symptom3: string;
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onEnter(){
+
+    console.log(this.symptom1, this.symptom2, this.symptom3)
   }
 
 }
