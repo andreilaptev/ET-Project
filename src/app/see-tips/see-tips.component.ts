@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router }  from '@angular/router';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-see-tips',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeeTipsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+    private sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
+
+    let id = this.sessionStorage.retrieve('id');
   }
 
 }

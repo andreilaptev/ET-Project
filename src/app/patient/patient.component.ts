@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }  from '@angular/router';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-patient',
@@ -8,7 +9,7 @@ import { Router }  from '@angular/router';
 })
 export class PatientComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private sessionStorage: SessionStorageService) { }
 
   ngOnInit() {
   }
@@ -19,6 +20,8 @@ export class PatientComponent implements OnInit {
   }
 
   seeTips(){
+
+    this.sessionStorage.store('id', 111);
     this.router.navigate(['see-tips']);
   }
 

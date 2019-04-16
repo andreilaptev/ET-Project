@@ -20,6 +20,8 @@ import { NurseLoginComponent } from './nurse-login/nurse-login.component';
 import { PatientLoginComponent } from './patient-login/patient-login.component';
 import { SeeTipsComponent } from './see-tips/see-tips.component';
 
+import { NgxWebstorageModule } from 'ngx-webstorage';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { SeeTipsComponent } from './see-tips/see-tips.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxWebstorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
