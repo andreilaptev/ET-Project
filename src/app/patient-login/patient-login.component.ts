@@ -54,7 +54,7 @@ export class PatientLoginComponent implements OnInit {
   }
  
   checkPass(){
-    console.log(this.answer);
+    console.log(this.requestedPatient);
      
   }
    
