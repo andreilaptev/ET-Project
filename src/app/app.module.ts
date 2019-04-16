@@ -18,6 +18,7 @@ import { VideoComponent } from './video/video.component';
 import { CreatePrecriptionComponent } from './create-precription/create-precription.component';
 import { NurseLoginComponent } from './nurse-login/nurse-login.component';
 import { PatientLoginComponent } from './patient-login/patient-login.component';
+import { SeeTipsComponent } from './see-tips/see-tips.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PatientLoginComponent } from './patient-login/patient-login.component';
     VideoComponent,
     CreatePrecriptionComponent,
     NurseLoginComponent,
-    PatientLoginComponent
+    PatientLoginComponent,
+    SeeTipsComponent
     
   ],
   imports: [
