@@ -18,6 +18,10 @@ export class PatientComponent implements OnInit {
     this.router.navigate(['register']);
   }
 
+  seeTips(){
+    this.router.navigate(['see-tips']);
+  }
+
   seePrescriptions(){
     this.router.navigate(['prescription_page']);
   }
