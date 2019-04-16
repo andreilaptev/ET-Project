@@ -24,6 +24,10 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { CreateEmergencyComponent } from './create-emergency/create-emergency.component';
 import { EnterDailyInfoComponent } from './enter-daily-info/enter-daily-info.component';
 import { CheckDiseaseComponent } from './check-disease/check-disease.component';
+import { SeeClinicalInfoComponent } from './see-clinical-info/see-clinical-info.component';
+import { EnterSignesComponent } from './enter-signes/enter-signes.component';
+import { MakeTipsComponent } from './make-tips/make-tips.component';
+import { SeeEmergencyComponent } from './see-emergency/see-emergency.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { CheckDiseaseComponent } from './check-disease/check-disease.component';
     SeeTipsComponent,
     CreateEmergencyComponent,
     EnterDailyInfoComponent,
-    CheckDiseaseComponent
+    CheckDiseaseComponent,
+    SeeClinicalInfoComponent,
+    EnterSignesComponent,
+    MakeTipsComponent,
+    SeeEmergencyComponent
     
   ],
   imports: [

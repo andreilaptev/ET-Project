@@ -15,6 +15,10 @@ import { SeeTipsComponent } from 'src/app/see-tips/see-tips.component';
 import { CreateEmergencyComponent } from 'src/app/create-emergency/create-emergency.component';
 import { EnterDailyInfoComponent } from 'src/app/enter-daily-info/enter-daily-info.component';
 import { CheckDiseaseComponent } from 'src/app/check-disease/check-disease.component';
+import { SeeClinicalInfoComponent } from 'src/app/see-clinical-info/see-clinical-info.component';
+import { EnterSignesComponent } from 'src/app/enter-signes/enter-signes.component';
+import { MakeTipsComponent } from 'src/app/make-tips/make-tips.component';
+import { SeeEmergencyComponent } from 'src/app/see-emergency/see-emergency.component';
 
 const routes: Routes = [
 {
@@ -76,6 +80,22 @@ const routes: Routes = [
 {
   path: 'check-disease',
   component: CheckDiseaseComponent
+},
+{
+  path: 'clinical-info',
+  component: SeeClinicalInfoComponent
+},
+{
+  path: 'enter-signes',
+  component: EnterSignesComponent
+},
+{
+  path: 'make-tips',
+  component: MakeTipsComponent
+},
+{
+  path: 'see-emergency',
+  component: SeeEmergencyComponent
 }
 
 ];

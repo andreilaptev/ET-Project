@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }  from '@angular/router';
+import { ActivatedRoute, Router }  from '@angular/router';
 
 @Component({
   selector: 'app-nurse',
@@ -18,6 +18,22 @@ export class NurseComponent implements OnInit {
   }
   seePatientsList(){
     this.router.navigate(['list']);
+  }
+
+  seeClinicalInfo(){
+    this.router.navigate(['clinical-info']);
+  }
+
+  enterSignes(){
+    this.router.navigate(['enter-signes']);
+  }
+
+  makeTips(){
+    this.router.navigate(['make-tips']);
+  }
+
+  seeEmergency(){
+    this.router.navigate(['see-emergency']);
   }
 
   seePatientprescription(){
