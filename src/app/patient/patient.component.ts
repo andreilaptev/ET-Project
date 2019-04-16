@@ -25,6 +25,18 @@ export class PatientComponent implements OnInit {
     this.router.navigate(['see-tips']);
   }
 
+  createEmergency(){
+    this.router.navigate(['create-emergency']);
+  }
+
+  enterDailyInfo(){
+    this.router.navigate(['daily-info']);
+  }
+
+  checkDisease(){
+    this.router.navigate(['check-disease']);
+  }
+
   seePrescriptions(){
     this.router.navigate(['prescription_page']);
   }

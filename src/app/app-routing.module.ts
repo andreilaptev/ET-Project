@@ -13,6 +13,8 @@ import { NurseLoginComponent } from 'src/app/nurse-login/nurse-login.component';
 import { PatientLoginComponent } from 'src/app/patient-login/patient-login.component';
 import { SeeTipsComponent } from 'src/app/see-tips/see-tips.component';
 import { CreateEmergencyComponent } from 'src/app/create-emergency/create-emergency.component';
+import { EnterDailyInfoComponent } from 'src/app/enter-daily-info/enter-daily-info.component';
+import { CheckDiseaseComponent } from 'src/app/check-disease/check-disease.component';
 
 const routes: Routes = [
 {
@@ -66,6 +68,14 @@ const routes: Routes = [
 {
   path: 'create-emergency',
   component: CreateEmergencyComponent
+},
+{
+  path: 'daily-info',
+  component: EnterDailyInfoComponent
+},
+{
+  path: 'check-disease',
+  component: CheckDiseaseComponent
 }
 
 ];
