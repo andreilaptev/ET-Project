@@ -34,15 +34,13 @@ export class DataService {
       password: password 
   };
 
-  
-   
-
-  let params = new HttpParams().set("req" , JSON.stringify(body));
+  /*let params = new HttpParams().set("req" , JSON.stringify(body));
   let headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
-   return  this.http.get('http://localhost:8080/auth/patient-login', {params: params});
-  
-  
+   return  this.http.get('http://localhost:8080/auth/patient-login', {params: params});*/
+
+   return  this.http.get('http://localhost:8080/auth/patient-login?email=' + email + '&password=' + password);
+
   }
 
   nurseLogin(email, password){

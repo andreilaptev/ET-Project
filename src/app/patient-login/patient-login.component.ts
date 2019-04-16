@@ -29,28 +29,33 @@ export class PatientLoginComponent implements OnInit {
 
     //this.requestLogin(email, password);
 
-   /* this.data.patientLogin(email, password).subscribe(
-      patient => this.requestedPatient = patient )  
-*/
-    this.data.testHttp().subscribe(
+    this.data.patientLogin(email, password).subscribe(
+      patient => {
+        this.requestedPatient = patient      
+        console.log(this.requestedPatient);
+      
+      })  
+
+
+/*    this.data.testHttp().subscribe(
       data => {
         this.answer = data;
         console.log(this.answer);
 
         this.checkPass();
-        this.outsideAnswer = this.answer;
+         
       }
 
        
     )    
-
+*/
     this.checkPass();
     
   }
  
   checkPass(){
     console.log(this.answer);
-    console.log(this.outsideAnswer);
+     
   }
    
    
