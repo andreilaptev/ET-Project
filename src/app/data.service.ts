@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,  HttpHeaders, HttpParams } from '@angular/common/http';
-//import { Patient } from '../patient';
+//import 'rxjs/Rx';
+import { Patient } from './patient';
 
 @Injectable({
   providedIn: 'root'
@@ -33,10 +34,15 @@ export class DataService {
       password: password 
   };
 
+  
+   
+
   let params = new HttpParams().set("req" , JSON.stringify(body));
   let headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
    return  this.http.get('http://localhost:8080/auth/patient-login', {params: params});
+  
+  
   }
 
   nurseLogin(email, password){
@@ -45,5 +51,13 @@ export class DataService {
       password: password 
   };
   return this.http.post('http://localhost:8080/auth/nurse-login', body);
+  }
+
+  testHttp(){
+
+    const id = 1;
+
+    let temp = this.http.get('http://laptevphamproject-prod.us-east-1.elasticbeanstalk.com/api/Customers/' + id);
+    return temp;
   }
 }

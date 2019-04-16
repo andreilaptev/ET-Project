@@ -11,12 +11,15 @@ import { Patient } from '../patient';
   templateUrl: './patient-login.component.html',
   styleUrls: ['./patient-login.component.css']
 })
-export class PatientLoginComponent implements OnInit {
+export class PatientLoginComponent implements OnInit {  
 
   constructor(private data: DataService, private router: Router) { }
 
-  requestedPatient: any;
+  requestedPatient: object;
   authorizationError: boolean = false;
+
+  answer: any;
+  outsideAnswer: any;
 
   ngOnInit() {
   }
@@ -24,21 +27,43 @@ export class PatientLoginComponent implements OnInit {
 
   onLogin(email, password){
 
-    this.data.patientLogin(email, password).subscribe(
-      data => {
-        this.requestedPatient = data;
-      
-        console.log(this.requestedPatient);
-      }
-    )
+    //this.requestLogin(email, password);
 
-    console.log(this.requestedPatient);
-    if (this.requestedPatient.password === password) {
+   /* this.data.patientLogin(email, password).subscribe(
+      patient => this.requestedPatient = patient )  
+*/
+    this.data.testHttp().subscribe(
+      data => {
+        this.answer = data;
+        console.log(this.answer);
+
+        this.checkPass();
+        this.outsideAnswer = this.answer;
+      }
+
+       
+    )    
+
+    this.checkPass();
+    
+  }
+ 
+  checkPass(){
+    console.log(this.answer);
+    console.log(this.outsideAnswer);
+  }
+   
+   
+ /*
+    if (this.requestedPatient === password) {
 
       this.router.navigate(['patient_page']);
     }
     else {
       this.authorizationError = true;
-    }
-  }
+    }*/
+  
+
+  
+  
 }
