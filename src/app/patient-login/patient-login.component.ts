@@ -6,6 +6,7 @@ import { concat } from 'rxjs/internal/observable/concat';
 import { HttpClient } from '@angular/common/http';
 import { Patient } from '../patient';
 import { debug } from 'util';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-patient-login',
@@ -14,7 +15,7 @@ import { debug } from 'util';
 })
 export class PatientLoginComponent implements OnInit {  
 
-  constructor(private data: DataService, private router: Router) { }
+  constructor(private data: DataService, private router: Router, private sessionStorage: SessionStorageService) { }
 
   requestedPatient: any;
   authorizationError: boolean = false;
@@ -46,7 +47,7 @@ export class PatientLoginComponent implements OnInit {
           this.requestedPatient = patient      
           console.log(this.requestedPatient);
 
-          //debugger
+          debugger
 
           if (this.requestedPatient === null) {
             this.router.navigate(['patient-login']);
@@ -54,6 +55,7 @@ export class PatientLoginComponent implements OnInit {
           }else            
               if (this.requestedPatient.password === this.password) {
 
+                this.sessionStorage.store('id', this.requestedPatient._id);
                 this.router.navigate(['patient_page']);
               }
               else {
