@@ -9,6 +9,15 @@ import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 })
 export class SeeTipsComponent implements OnInit {
 
+  tips: any;
+  tip: any = {
+    title: "First",
+    body: "Lorem Ipsum",
+    nurse_id: 111
+
+  };
+  patientName: string = "test";
+
   constructor(private router: Router,
     private sessionStorage: SessionStorageService) { }
 
