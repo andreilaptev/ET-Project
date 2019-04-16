@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { concat } from 'rxjs/internal/observable/concat';
 import { HttpClient } from '@angular/common/http';
 import { Patient } from '../patient';
+import { debug } from 'util';
 
 @Component({
   selector: 'app-patient-login',
@@ -15,8 +16,10 @@ export class PatientLoginComponent implements OnInit {
 
   constructor(private data: DataService, private router: Router) { }
 
-  requestedPatient: object;
+  requestedPatient: any;
   authorizationError: boolean = false;
+  email: string;
+  password: string;
 
   answer: any;
   outsideAnswer: any;
@@ -25,50 +28,42 @@ export class PatientLoginComponent implements OnInit {
   }
 
 
-  onLogin(email, password){
+  onLogin(){
 
-    //this.requestLogin(email, password);
-
-    this.data.patientLogin(email, password).subscribe(
-      patient => {
-        this.requestedPatient = patient      
-        console.log(this.requestedPatient);
-      
-      })  
-
-
-/*    this.data.testHttp().subscribe(
-      data => {
-        this.answer = data;
-        console.log(this.answer);
-
-        this.checkPass();
-         
-      }
-
-       
-    )    
-*/
-    this.checkPass();
-    
+    this.requestLogin();    
   }
+
+
  
   checkPass(){
     console.log(this.requestedPatient);
      
   }
-   
-   
- /*
-    if (this.requestedPatient === password) {
 
-      this.router.navigate(['patient_page']);
-    }
-    else {
-      this.authorizationError = true;
-    }*/
+    requestLogin(){
+      this.data.patientLogin(this.email, this.password).subscribe(
+        patient => {
+          this.requestedPatient = patient      
+          console.log(this.requestedPatient);
+
+          //debugger
+
+          if (this.requestedPatient === null) {
+            this.router.navigate(['patient-login']);
+            this.authorizationError = true;
+          }else            
+              if (this.requestedPatient.password === this.password) {
+
+                this.router.navigate(['patient_page']);
+              }
+              else {
+                this.authorizationError = true;
+              }
+
+        
+        })  
   
-
+    }
   
   
 }
