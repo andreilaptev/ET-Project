@@ -21,6 +21,7 @@ import { PatientLoginComponent } from './patient-login/patient-login.component';
 import { SeeTipsComponent } from './see-tips/see-tips.component';
 
 import { NgxWebstorageModule } from 'ngx-webstorage';
+import { CreateEmergencyComponent } from './create-emergency/create-emergency.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     CreatePrecriptionComponent,
     NurseLoginComponent,
     PatientLoginComponent,
-    SeeTipsComponent
+    SeeTipsComponent,
+    CreateEmergencyComponent
     
   ],
   imports: [

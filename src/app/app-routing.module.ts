@@ -12,6 +12,7 @@ import { CreatePrecriptionComponent } from 'src/app/create-precription/create-pr
 import { NurseLoginComponent } from 'src/app/nurse-login/nurse-login.component';
 import { PatientLoginComponent } from 'src/app/patient-login/patient-login.component';
 import { SeeTipsComponent } from 'src/app/see-tips/see-tips.component';
+import { CreateEmergencyComponent } from 'src/app/create-emergency/create-emergency.component';
 
 const routes: Routes = [
 {
@@ -61,6 +62,10 @@ const routes: Routes = [
 {
   path: 'see-tips',
   component: SeeTipsComponent
+},
+{
+  path: 'create-emergency',
+  component: CreateEmergencyComponent
 }
 
 ];
