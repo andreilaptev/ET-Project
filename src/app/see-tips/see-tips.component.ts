@@ -14,7 +14,9 @@ export class SeeTipsComponent implements OnInit {
 
   ngOnInit() {
 
-    let id = this.sessionStorage.retrieve('id');
+    let patient = this.sessionStorage.retrieve('patient');
+
+    console.log(patient._id)
   }
 
 }
