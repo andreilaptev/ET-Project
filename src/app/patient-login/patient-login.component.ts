@@ -47,7 +47,7 @@ export class PatientLoginComponent implements OnInit {
           this.requestedPatient = patient      
           console.log(this.requestedPatient);
 
-          debugger
+          //debugger
 
           if (this.requestedPatient === null) {
             this.router.navigate(['patient-login']);
