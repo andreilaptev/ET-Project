@@ -1,3 +1,31 @@
-<p>
-  see-tips works!
-</p>
+<div style="text-align: center">
+    <h2 class="flight_name">  Patient Name : {{ name }} </h2>
+</div>
+
+<div class="container">
+    
+    <div style="text-align: center">
+        
+      <ul>         
+        <!--<li  *ngFor="let flight of filteredFlights"> -->
+           <!-- <li  *ngFor="let tip of tips">  -->
+            
+            <div class="tip-container"> 
+                        
+                <h3> Tip : {{ tip.title }}</h3>
+                <h5> Given by Nurse: {{ nurseName }}</h5>
+
+                <div class="tip-body">
+                  {{ tip.body}}
+                </div>
+                     
+                 
+             </div>
+      <!--  </li>-->
+        
+    </ul>
+    </div>
+  
+  
+  </div>
+  
