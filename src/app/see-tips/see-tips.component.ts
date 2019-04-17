@@ -37,10 +37,6 @@ export class SeeTipsComponent implements OnInit {
     this.data.seeMotivationalTips(this.patient._id).subscribe(
       data => {
         this.tips = data
-
-        debugger
-
-        
       }
     )
 
