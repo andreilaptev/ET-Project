@@ -40,9 +40,9 @@ export class SeeTipsComponent implements OnInit {
       }
     )
 
-    let patient = this.sessionStorage.retrieve('patient');
+    //let patient = this.sessionStorage.retrieve('patient');
 
-    console.log(patient._id)
+    //console.log(patient._id)
   }
 
 }
