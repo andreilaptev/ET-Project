@@ -15,7 +15,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th style="padding-right: 30px"> Title </th>
+                                <th style="padding-right: 30px; color: red"> Title </th>
                                 <th style="padding-right: 30px"> Patient ID</th>
                                 <th style="padding-right: 30px"> Description </th>
                                  <th style="padding-right: 30px"> Date </th>
@@ -24,7 +24,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding-right: 30px">{{ emergency.title }}</td> <!-- | enter: departureCityField : i-->
+                                <td style="padding-right: 30px; color: red">{{ emergency.title }}</td> <!-- | enter: departureCityField : i-->
                                 <td style="padding-right: 30px"> {{ emergency.patient_id  }}</td>
                                 <td style="padding-right: 30px"> {{ emergency.body }}</td>
                                 <td style="padding-right: 30px"> {{ emergency.createdAt | date }}</td>
