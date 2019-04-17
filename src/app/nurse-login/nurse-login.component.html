@@ -1,23 +1,18 @@
 <div class="container">
 
     <h2> LOGIN FORM </h2>
-  
-    Name :<br>
-   <input type="text" name="name" [(ngModel)]="newPatient.name"/>
    
-    <br> <br>
-  
     Email:<br>
-  <input type="text" name="email"   [(ngModel)]="newPatient.email" /> 
+  <input type="text" name="email"   [(ngModel)]="email" /> 
    
   <br><br>
   
   Password: <br>
-  <input type="password" name="password" [(ngModel)]="newPatient.password" />
+  <input type="password" name="password" [(ngModel)]="password" />
    
   <br><br>
   
-    <button class="enterBtn" (click)="addPatient(newPatient)"> LOGIN </button>
+    <button class="enterBtn" (click)="onLogin(email, password)"> LOGIN </button>
     <br>
   
   
