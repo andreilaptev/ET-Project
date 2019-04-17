@@ -51,5 +51,39 @@ export class DataService {
   return this.http.get('http://localhost:8080/auth/nurse-login?email=' + email + '&password=' + password);
   }
 
+  getNurseByEmail(email){
+    return this.http.get('http://localhost:8080/nurse?email=' + email);
+  }
+
+  addClinicalSignes(email, temp, rate, pressure){
+
+    const body = {
+      "email": email,
+      "bodyTemperature": temp,
+      "heartRate": rate,
+      "bloodPressure": pressure
+
+    }
+    return this.http.post('http://localhost:8080/nurse/clinical-signs', body);
+  }
+
+  seeEmergencyList(){
+    return this.http.get('http://localhost:8080/nurse/alerts');
+  }
+
+  seeMotivationalTips(patientId){
+    return this.http.get('http://localhost:8080/patient/tips?patient_id=' + patientId);
+  }
    
+  createEmergency(patientId, title, msg){
+
+    const body = {
+      "title": title, 
+  	"body": msg, 
+  	"patient_id": patientId
+
+    }
+
+    return this.http.post('http://localhost:8080/patient/alerts', body);
+  }
 }
