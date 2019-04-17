@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }  from '@angular/router';
 import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
+import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from "@angular/router";
+import { concat } from 'rxjs/internal/observable/concat';
+import { HttpClient } from '@angular/common/http';
+import { Nurse } from '../nurse';
+import { debug } from 'util';
+
 
 @Component({
   selector: 'app-patient',
@@ -9,7 +16,8 @@ import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 })
 export class PatientComponent implements OnInit {
 
-  constructor(private router: Router,private sessionStorage: SessionStorageService) { }
+  constructor(private router: Router,private sessionStorage: SessionStorageService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
