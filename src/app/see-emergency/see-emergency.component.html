@@ -1,12 +1,14 @@
-<div class="container">
-
-  <div style="text-align: center">
+<div style="text-align: center">
     <h2 class="flight_name">  Emergencies List </h2>
   </div>
+
+<div class="container">
+
+ 
     <div>
       <ul>         
         <!--<li  *ngFor="let flight of filteredFlights"> -->
-            <li> <!-- *ngFor="let emergency of emergencies">  -->
+            <li  *ngFor="let alert of alerts">  
             
             <div > 
                               
@@ -24,10 +26,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding-right: 30px; color: red">{{ emergency.title }}</td> <!-- | enter: departureCityField : i-->
-                                <td style="padding-right: 30px"> {{ emergency.patient_id  }}</td>
-                                <td style="padding-right: 30px"> {{ emergency.body }}</td>
-                                <td style="padding-right: 30px"> {{ emergency.createdAt | date }}</td>
+                                <td style="padding-right: 30px; color: red">{{ alert.title }}</td> <!-- | enter: departureCityField : i-->
+                                <td style="padding-right: 30px"> {{ alert.patient_id  }}</td>
+                                <td style="padding-right: 30px"> {{ alert.body }}</td>
+                                <td style="padding-right: 30px"> {{ alert.createdAt | date }}</td>
                                 <!--<td> {{ flight.arrivalTime }}</td>
                                 <td>
                                    <div style="color:green" *ngIf="flight.direct;else unset"> Yes</div> 

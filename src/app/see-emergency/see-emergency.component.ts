@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { concat } from 'rxjs/internal/observable/concat';
 import { HttpClient } from '@angular/common/http';
 import { Nurse } from '../nurse';
+import { Alert } from '../alert';
 import { debug } from 'util';
 import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
@@ -15,7 +16,8 @@ import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 })
 export class SeeEmergencyComponent implements OnInit {
 
-  emergencies: any;
+  alerts: any;
+  alert: any;
  /* emergency = {
 
     "title": "Terrbile headache",
@@ -31,8 +33,12 @@ export class SeeEmergencyComponent implements OnInit {
   ngOnInit() {
 
     this.data.seeEmergencyList().subscribe(
-      data => this.emergencies = data
+      data => {
+        this.alerts = data
 
+        //debugger
+        console.log(this.alerts)
+      }
     )
   }
 
