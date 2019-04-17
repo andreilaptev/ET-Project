@@ -2,26 +2,19 @@
     <h2 class="flight_name">  Emergencies List </h2>
   </div>
 
-<div class="container">
-
- 
+<div class="container"> 
     <div>
       <ul>         
         <!--<li  *ngFor="let flight of filteredFlights"> -->
-            <li  *ngFor="let alert of alerts">  
-            
+            <li  *ngFor="let alert of alerts">              
             <div > 
-                              
-               
-  
-                    <table>
+                     <table>
                         <thead>
                             <tr>
                                 <th style="padding-right: 30px; color: red"> Title </th>
                                 <th style="padding-right: 30px"> Patient ID</th>
                                 <th style="padding-right: 30px"> Description </th>
-                                 <th style="padding-right: 30px"> Date </th>
-                                
+                                 <th style="padding-right: 30px"> Date </th>                                
                             </tr>
                         </thead>
                         <tbody>
@@ -30,16 +23,9 @@
                                 <td style="padding-right: 30px"> {{ alert.patient_id  }}</td>
                                 <td style="padding-right: 30px"> {{ alert.body }}</td>
                                 <td style="padding-right: 30px"> {{ alert.createdAt | date }}</td>
-                                <!--<td> {{ flight.arrivalTime }}</td>
-                                <td>
-                                   <div style="color:green" *ngIf="flight.direct;else unset"> Yes</div> 
-                                   <ng-template #unset>No </ng-template>
-                                </td>
-                                <td> {{ flight.ticketPrice }} </td>-->
                             </tr>
                         </tbody>
-                    </table>
-                 
+                    </table>                 
              </div>
         </li>
         
