@@ -1,7 +1,7 @@
 <div class="container">
 
     <h2> LOGIN FORM </h2>
-   
+    <h3 *ngIf="authorizationError" style="color: red"> Authorization Error </h3>
     Email:<br>
   <input type="text" name="email"   [(ngModel)]="email" /> 
    
