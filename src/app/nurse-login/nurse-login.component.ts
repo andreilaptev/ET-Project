@@ -38,7 +38,7 @@ export class NurseLoginComponent implements OnInit {
   }
 
     requestLogin(){
-      this.data.patientLogin(this.email, this.password).subscribe(
+      this.data.nurseLogin(this.email, this.password).subscribe(
         patient => {
           this.requestedNurse = patient      
           console.log(this.requestedNurse);
