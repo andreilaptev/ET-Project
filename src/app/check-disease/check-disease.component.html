@@ -1,18 +1,18 @@
 <div class="container" style="text-align:center"> 
 <div class="boxes">
-  <input type="checkbox" [(ngModel)]="sneezing" value="Sneezing" name="Sneezing"/> Sneezing <br>
-  <input type="checkbox" [(ngModel)]="itching" value="Itching" name="Itching"/> Itching <br>
-  <input type="checkbox" [(ngModel)]="soreThroat" value="Sore Throat" name="Sore Throat"/> Sore Throat <br>
-  <input type="checkbox" [(ngModel)]="cough" value="Cough" name="HeadaCoughche"/> Cough <br>
-  <input type="checkbox" [(ngModel)]="fever" value="Fever" name="Fever"/> FEVER <br>
-  <input type="checkbox" [(ngModel)]="appetiteLoss" value="Lost Appetite" name="Appetite"/> Appetite Loss <br>
-  <input type="checkbox" [(ngModel)]="inactivity" value="Inactivity" name="Inactivity"/> Inactivity<br>
-  <input type="checkbox" [(ngModel)]="chestPain" value="Chest Pain" name="Chest Pain"/> Chest Pain <br>
-  <input type="checkbox" [(ngModel)]="purplishSkin" value="Purplish Skin" name="Purplish Skin"/>Purplish Skin <br>
-  <input type="checkbox" [(ngModel)]="panic" value="Panic" name="Panic"/> Panic <br>
-  <input type="checkbox" [(ngModel)]="stress" value="Stress" name="Stress"/> Stress <br>
-  <input type="checkbox" [(ngModel)]="sweating" value="Sweating" name="Sweating"/> Sweating <br>
+  <input type="checkbox" [(ngModel)]="sneezing" value="Sneezing" name="Sneezing"/> <span class="symptom">Sneezing </span> <br>
+  <input type="checkbox" [(ngModel)]="itching" value="Itching" name="Itching"/> <span class="symptom">Itching </span><br>
+  <input type="checkbox" [(ngModel)]="soreThroat" value="Sore Throat" name="Sore Throat"/><span class="symptom"> Sore Throat</span> <br>
+  <input type="checkbox" [(ngModel)]="cough" value="Cough" name="HeadaCoughche"/> <span class="symptom">Cough </span><br>
+  <input type="checkbox" [(ngModel)]="fever" value="Fever" name="Fever"/> <span class="symptom">Fever </span><br>
+  <input type="checkbox" [(ngModel)]="appetiteLoss" value="Lost Appetite" name="Appetite"/><span class="symptom"> Appetite Loss </span><br>
+  <input type="checkbox" [(ngModel)]="inactivity" value="Inactivity" name="Inactivity"/><span class="symptom"> Inactivity</span><br>
+  <input type="checkbox" [(ngModel)]="chestPain" value="Chest Pain" name="Chest Pain"/><span class="symptom"> Chest Pain </span><br>
+  <input type="checkbox" [(ngModel)]="purplishSkin" value="Purplish Skin" name="Purplish Skin"/> <span class="symptom"> Purplish Skin </span><br>
+  <input type="checkbox" [(ngModel)]="panic" value="Panic" name="Panic"/> <span class="symptom">Panic</span> <br>
+  <input type="checkbox" [(ngModel)]="stress" value="Stress" name="Stress"/> <span class="symptom">Stress</span> <br>
+  <input type="checkbox" [(ngModel)]="sweating" value="Sweating" name="Sweating"/> <span class="symptom">Sweating</span> <br>
 
-  <button (click)="onEnter()"> CHECK </button>
+  <button (click)="onEnter()" class="enterBtn"> CHECK </button>
 </div>
 </div>

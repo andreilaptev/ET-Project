@@ -104,3 +104,22 @@ button {
         .tip-body{
             text-align: justify;
         }
+        .enterBtn{
+            border: 1px solid darkblue;
+            background: #f46e42;
+            border-radius: 5px;
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            font-weight: 600;
+            color: yellow;
+            margin: 20px 10% 30px 10%;
+            cursor: pointer;
+        }
+
+        input {
+            margin: 10px 0 10px 0;
+        }
+        .symptom{
+            font-size: 30px;
+        }
