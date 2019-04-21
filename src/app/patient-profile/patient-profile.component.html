@@ -1,12 +1,38 @@
 <div class="container">
   <h1> Patient: {{patient[0].name}}</h1>
   <h3> Please Choose Your Activity</h3>
-    <div class="buttons">
+    <div class="buttons" *ngIf="mainMenu">
       <button (click)="enterSignes()" class=" enterBtn"> Enter Clinical Signes</button>
 <br>
 <button (click)="makeTips()" class=" enterBtn"> Make Motivational Tips</button>
 <br>
     </div>
+
+    <div class="signes" *ngIf="signesRequested">
+
+      <h2>Body Temperature:</h2>
+      <input type="number" [(ngModel)] = "bodyTemperature"/>
+      <h2>Heart Rate:</h2>
+      <input type="number" [(ngModel)] = "heartRate"/>
+      <h2>Blood Pressure:</h2>
+      <input type="text" [(ngModel)] = "bloodPressure"/>
+      <br><br><br>
+      <button (click)="onSignesEntered()" class=" enterBtn"> Send Signes</button>
+
+    </div>
+
+    <br>
+    <div class="tips" *ngIf="tipsRequested">
+
+        <h2>Tip Title:</h2>
+        <input type="text" [(ngModel)] = "title"/>
+        <h2>Tip Body:</h2>
+        <input type="text" [(ngModel)] = "body"/>
+        <br><br><br>
+        <button (click)="onTipsEntered()" class=" enterBtn"> Send Tip</button>
+  
+      </div>
+
   </div>
 
 

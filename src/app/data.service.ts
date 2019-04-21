@@ -55,20 +55,34 @@ export class DataService {
     return this.http.get('http://localhost:8080/nurse?email=' + email);
   }
 
-  addClinicalSignes(email, temp, rate, pressure){
+  addClinicalSignes(patientId, temp, rate, pressure){
 
     const body = {
-      "email": email,
+      
       "bodyTemperature": temp,
       "heartRate": rate,
       "bloodPressure": pressure
 
     }
-    return this.http.post('http://localhost:8080/nurse/clinical-signs', body);
+    return this.http.post('http://localhost:8080/nurse/clinical-signs' + patientId, body);
   }
 
   seeEmergencyList(){
     return this.http.get('http://localhost:8080/nurse/alerts');
+  }
+
+
+  makeNotivationalTip(patientId, title, body, nurseId){
+
+    const body1  = {
+      "title": title,
+      "body" : body,
+      "patient_id": patientId,
+      "nurse_id": nurseId
+
+    }
+
+    return this.http.post('http://localhost:8080/nurse/create-tip', body1);
   }
 
   seeMotivationalTips(patientId){
