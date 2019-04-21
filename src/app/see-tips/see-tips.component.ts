@@ -45,7 +45,7 @@ export class SeeTipsComponent implements OnInit {
         this.tips = data
 
         console.log(this.tips)
-        debugger
+       // debugger
       }
     )
 

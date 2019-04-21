@@ -67,6 +67,10 @@ export class DataService {
     return this.http.post('http://localhost:8080/nurse/clinical-signs' + patientId, body);
   }
 
+  seeClinicalSignes(patientId){
+    return this.http.get('http://localhost:8080/nurse/clinical-signs' + patientId);
+  }
+
   seeEmergencyList(){
     return this.http.get('http://localhost:8080/nurse/alerts');
   }
@@ -99,5 +103,16 @@ export class DataService {
     }
 
     return this.http.post('http://localhost:8080/patient/alerts', body);
+  }
+
+  checkDesease(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12){
+
+    const body = {
+      "symptoms": [        
+         s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12
+      ]
+    }
+
+    return this.http.post('http://localhost:8080/patient/check-symptoms', body);
   }
 }
