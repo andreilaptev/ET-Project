@@ -11,7 +11,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getAllPatients() {
-    return this.http.get('http://localhost:8080/nurse/patients');
+    return this.http.get('http://localhost:8080/patient');
   }  
 
   registerPatient(patient){
@@ -25,7 +25,7 @@ export class DataService {
   }
 
   getPatient(patientId){
-
+    return this.http.get('http://localhost:8080/patient?id=', patientId);
   }
 
   patientLogin(email, password){

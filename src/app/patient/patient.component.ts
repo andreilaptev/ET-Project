@@ -16,11 +16,19 @@ import { debug } from 'util';
 })
 export class PatientComponent implements OnInit {
 
+  patId: number;
+  patient: any;
+
   constructor(private router: Router,private sessionStorage: SessionStorageService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute, private data: DataService) { 
+
+                this.route.params.subscribe(params => this.patId = params.id)
+              }
 
   ngOnInit() {
-  }
+
+    this.data.getPatient(this.patId).subscribe(data => this.patient = data)
+  };
 
 
   register(){
