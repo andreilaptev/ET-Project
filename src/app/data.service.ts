@@ -107,12 +107,16 @@ export class DataService {
 
   checkDesease(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12){
 
-    const body = {
+   /* const body = {
       "symptoms": [        
          s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12
       ]
-    }
+    }*/
 
-    return this.http.post('http://localhost:8080/patient/check-symptoms', body);
+    return this.http.get('http://localhost:8080/patient/check-symptoms?symptom1=' + s1+
+    '&symptom2=' + s2 + '&symptom3=' + s3 + '&symptom4=' + s4 + '&symptom5=' + s5 +'&symptom6=' + s6 + 
+    '&symptom7=' + s7+ '&symptom8=' + s8 + '&symptom9=' + s9 +'&symptom10=' + s10 + '&symptom11=' + s11+
+    '&symptom12=' + s12);
+  
   }
 }

@@ -15,18 +15,18 @@ import { debug } from 'util';
 })
 export class CheckDiseaseComponent implements OnInit {
 
-  symptom1: string;
-  symptom2: string;
-  symptom3: string;
-  symptom4: string;
-  symptom5: string;
-  symptom6: string;
-  symptom7: string;
-  symptom8: string;
-  symptom9: string;
-  symptom10: string;
-  symptom11: string;
-  symptom12: string;
+  sneezing: boolean;
+  itching: boolean;
+  soreThroat: boolean;
+  cough: boolean;
+  fever: boolean;
+  appetiteLoss: boolean;
+  inactivity: boolean;
+  chestPain: boolean;
+  purplishSkin: boolean;
+  panic: boolean;
+  stress: boolean;
+  sweating: boolean;
 
   constructor(private data: DataService) { }
 
@@ -37,8 +37,21 @@ export class CheckDiseaseComponent implements OnInit {
 
   onEnter(){
 
-    this.data.checkDesease(this.symptom1, this.symptom2, this.symptom3, this.symptom4, this.symptom5, 
-      this.symptom6, this.symptom7, this.symptom8, this.symptom9, this.symptom10, this.symptom11, this.symptom12 )
+    if (this.sneezing == undefined) this.sneezing = false;
+    if (this.itching == undefined) this.itching = false;
+    if (this.soreThroat == undefined) this.soreThroat = false;
+    if (this.cough == undefined) this.cough = false;
+    if (this.fever == undefined) this.fever = false;
+    if (this.appetiteLoss == undefined) this.appetiteLoss = false;
+    if (this.inactivity == undefined) this.inactivity = false;
+    if (this.chestPain == undefined) this.chestPain = false;
+    if (this.purplishSkin == undefined) this.purplishSkin = false;
+    if (this.panic == undefined) this.panic = false;
+    if (this.stress == undefined) this.stress = false;
+    if (this.sweating == undefined) this.sweating = false;
+
+    this.data.checkDesease(this.sneezing, this.itching, this.soreThroat, this.cough, this.fever, 
+      this.appetiteLoss, this.inactivity, this.chestPain, this.purplishSkin, this.panic, this.stress, this.sweating )
       .subscribe(data => this.deseases = data)
    // console.log(this.symptom1, this.symptom2, this.symptom3)
 
