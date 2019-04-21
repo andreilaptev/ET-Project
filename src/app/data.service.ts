@@ -25,7 +25,7 @@ export class DataService {
   }
 
   getPatient(patientId){
-    return this.http.get('http://localhost:8080/patient?id=', patientId);
+    return this.http.get('http://localhost:8080/patient?id='+ patientId);
   }
 
   patientLogin(email, password){

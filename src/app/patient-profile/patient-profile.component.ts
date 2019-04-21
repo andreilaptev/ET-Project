@@ -12,13 +12,20 @@ import { Patient } from '../patient';
 })
 export class PatientProfileComponent implements OnInit {
 
-  patienId: number;
+  patientId: number;
+  patient: object;
 
   constructor(private route: ActivatedRoute, private data: DataService) { 
-    this.route.params.subscribe( params => this.patienId = params.id );
+    this.route.params.subscribe( params => this.patientId = params.id );
   }
 
   ngOnInit() {
+    this.data.getPatient(this.patientId).subscribe(data => 
+      {this.patient = data
+      console.log(this.patient)
+      
+      })
+    
   }
 
 }

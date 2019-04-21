@@ -27,7 +27,7 @@ export class PatientComponent implements OnInit {
 
   ngOnInit() {
 
-    this.data.getPatient(this.patId).subscribe(data => this.patient = data)
+    
   };
 
 
