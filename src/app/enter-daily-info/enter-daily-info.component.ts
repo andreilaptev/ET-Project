@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from "@angular/router";
+import { concat } from 'rxjs/internal/observable/concat';
+import { HttpClient } from '@angular/common/http';
+import { Nurse } from '../nurse';
+import { debug } from 'util';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-enter-daily-info',
@@ -7,9 +15,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnterDailyInfoComponent implements OnInit {
 
-  constructor() { }
+  bodytemp: number;
+  heartRate: number;
+  bloodPressure: string;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
 
+  onInfoEntered(){
+
+
+  }
 }

@@ -1,3 +1,13 @@
-<p>
-  enter-daily-info works!
-</p>
+<div class="container">
+
+    <div class="signes" >
+
+        <h2>Body Temperature:</h2>
+        <input type="number" [(ngModel)] = "bodyTemperature"/>
+        <h2>Heart Rate:</h2>
+        <input type="number" [(ngModel)] = "heartRate"/>
+        <h2>Blood Pressure:</h2>
+        <input type="text" [(ngModel)] = "bloodPressure"/>
+        <br><br><br>
+        <button (click)="onInfoEntered()" class=" enterBtn"> Send Information </button>
+</div>

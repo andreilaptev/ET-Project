@@ -113,10 +113,20 @@ export class DataService {
       ]
     }*/
 
-    return this.http.get('http://localhost:8080/patient/check-symptoms?symptom1=' + s1+
-    '&symptom2=' + s2 + '&symptom3=' + s3 + '&symptom4=' + s4 + '&symptom5=' + s5 +'&symptom6=' + s6 + 
-    '&symptom7=' + s7+ '&symptom8=' + s8 + '&symptom9=' + s9 +'&symptom10=' + s10 + '&symptom11=' + s11+
-    '&symptom12=' + s12);
+    return this.http.get('http://localhost:8080/patient/check-symptoms?sneezing=' + s1+
+    '&itching=' + s2 + '&soreThroat=' + s3 + '&cough=' + s4 + '&fever=' + s5 +'&appetiteLoss=' + s6 + 
+    '&inactivity=' + s7+ '&chestPain=' + s8 + '&purplishSkin=' + s9 +'&panic=' + s10 + '&stress=' + s11+
+    '&sweating=' + s12);
   
   }
+
+  enterDailyInfo(patientId, temp, pressure, rate){
+
+    const body2 = {
+      "patient_id": patientId,
+
+    }
+    return this.http.post('http://localhost:8080/patient/dailyInfo', body2)
+  }
+  
 }
