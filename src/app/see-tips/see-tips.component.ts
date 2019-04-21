@@ -18,14 +18,16 @@ import { debug } from 'util';
 export class SeeTipsComponent implements OnInit {
 
   tips: any;
-  tip: any = {
+  /*tip: any = {
     title: "First",
     body: "Lorem Ipsum",
     nurse_id: 111
 
-  };
-  patientName: string = "test";
+  };*/
+  patientName: string;
   patient: any;
+  nurse: any;
+  nurseName: string;
 
   constructor(private router: Router, private data: DataService,
     private sessionStorage: SessionStorageService) { }
@@ -33,10 +35,17 @@ export class SeeTipsComponent implements OnInit {
   ngOnInit() {
 
     this.patient = this.sessionStorage.retrieve('patient');
+    this.patientName = this.patient.name;
+
+    this.nurse = this.sessionStorage.retrieve('nurse');
+    this.nurseName = this.nurse.name;
 
     this.data.seeMotivationalTips(this.patient._id).subscribe(
       data => {
         this.tips = data
+
+        console.log(this.tips)
+        debugger
       }
     )
 
