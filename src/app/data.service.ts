@@ -96,13 +96,13 @@ export class DataService {
   createEmergency(patientId, title, msg){
 
     const body = {
-      "title": title, 
+    "title": title, 
   	"body": msg, 
   	"patient_id": patientId
 
     }
 
-    return this.http.post('http://localhost:8080/patient/alerts', body);
+    return this.http.post('http://localhost:8080/patient/alert', body);
   }
 
   checkDesease(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12){

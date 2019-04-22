@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { concat } from 'rxjs/internal/observable/concat';
 import { HttpClient } from '@angular/common/http';
 import { debug } from 'util';
-import { fail } from 'jasmine';
+ 
 
 @Component({
   selector: 'app-check-disease',
