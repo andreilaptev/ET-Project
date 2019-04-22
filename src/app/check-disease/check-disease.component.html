@@ -15,4 +15,16 @@
 
   <button (click)="onEnter()" class="enterBtn"> CHECK </button>
 </div>
+
+<div class="diseases" *ngIf="chosen">
+
+  <h2> Possible Diseases :</h2>
+  <ul>
+    <li *ngFor="let desease of deseases">
+      {{ desease }}
+
+    </li>
+  </ul>
+
+</div>
 </div>

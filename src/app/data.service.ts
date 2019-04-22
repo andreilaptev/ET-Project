@@ -113,11 +113,17 @@ export class DataService {
       ]
     }*/
 
-    return this.http.get('http://localhost:8080/patient/check-symptoms?sneezing=' + s1+
-    '&itching=' + s2 + '&soreThroat=' + s3 + '&cough=' + s4 + '&fever=' + s5 +'&appetiteLoss=' + s6 + 
-    '&inactivity=' + s7+ '&chestPain=' + s8 + '&purplishSkin=' + s9 +'&panic=' + s10 + '&stress=' + s11+
-    '&sweating=' + s12);
+    /*return this.http.get('http://localhost:8080/patient/check-symptoms?sneezing='+s1
+    + '&itching=' + s2+ '&soreThroat=' + s3+ '&cough=' + s4 + '&fever=' + s5 +
+    '&appetiteLoss=' + s6+ '&inactivity='+ s7+ '&chestPain=' + s8+ '&purplishSkin='+ s9+ 
+    '&panic=' + s10 + '&stress=' + s11+ '&sweating=' + s12);*/
+
+    const url = 'http://localhost:8080/patient/check-symptoms?sneezing='+s1
+    + '&itching=' + s2+ '&soreThroat=' + s3+ '&cough=' + s4 + '&fever=' + s5 +
+    '&appetiteLoss=' + s6+ '&inactivity='+ s7+ '&chestPain=' + s8+ '&purplishSkin='+ s9+ 
+    '&panic=' + s10 + '&stress=' + s11+ '&sweating=' + s12;
   
+    return this.http.get(url);
   }
 
   enterDailyInfo(patientId, temp, pressure, rate){

@@ -19,12 +19,24 @@ export class EnterDailyInfoComponent implements OnInit {
   heartRate: number;
   bloodPressure: string;
 
-  constructor(private data: DataService) { }
+  patientId: number;
+
+  newInfo: any;
+
+  constructor(private data: DataService, private router: Router, private storage: SessionStorageService) { }
 
   ngOnInit() {
   }
 
   onInfoEntered(){
+
+    this.patientId = this.storage.retrieve('patient').patientId;
+
+
+    this.data.enterDailyInfo(this.patientId, this.bodytemp, this.bloodPressure, this.heartRate)
+    .subscribe(data => this.newInfo = data)
+
+    this.router.navigate(['patient-page']);
 
 
   }

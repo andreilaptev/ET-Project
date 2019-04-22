@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { concat } from 'rxjs/internal/observable/concat';
 import { HttpClient } from '@angular/common/http';
 import { debug } from 'util';
+import { fail } from 'jasmine';
 
 @Component({
   selector: 'app-check-disease',
@@ -28,6 +29,8 @@ export class CheckDiseaseComponent implements OnInit {
   stress: boolean;
   sweating: boolean;
 
+  chosen: boolean = false;
+
   constructor(private data: DataService) { }
 
   deseases: any;
@@ -36,6 +39,8 @@ export class CheckDiseaseComponent implements OnInit {
   }
 
   onEnter(){
+
+    this.chosen = !this.chosen;
 
     if (this.sneezing == undefined) this.sneezing = false;
     if (this.itching == undefined) this.itching = false;
@@ -51,11 +56,14 @@ export class CheckDiseaseComponent implements OnInit {
     if (this.sweating == undefined) this.sweating = false;
 
     this.data.checkDesease(this.sneezing, this.itching, this.soreThroat, this.cough, this.fever, 
-      this.appetiteLoss, this.inactivity, this.chestPain, this.purplishSkin, this.panic, this.stress, this.sweating )
-      .subscribe(data => this.deseases = data)
+      this.appetiteLoss, this.inactivity, this.chestPain, this.purplishSkin, this.panic, this.stress, this.sweating)
+      .subscribe(data => {
+        this.deseases = data
+        console.log(this.deseases)
+      }      
+      )
    // console.log(this.symptom1, this.symptom2, this.symptom3)
 
-   debugger
   }
 
 }
